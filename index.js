@@ -9,8 +9,8 @@ app.use(express.static("public"));
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 
-const quizRouter = require("./routes/quizRoutes");
-app.use("/api/quiz", quizRouter);
+const createUser = require("./routes/quizRoutes");
+app.use("/api/createuser", createUser);
 
 const questionRouter = require("./routes/questionRoutes");
 app.use("/api/question", questionRouter);
